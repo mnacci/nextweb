@@ -63,7 +63,7 @@ export const useAccessStore = createPersistStore(
 
           if (res.disableGPT4) {
             DEFAULT_MODELS.forEach(
-              (m: any) => (m.available = !m.name.startsWith("gpt-4")),
+              (m: any) => (m.available = !m.name.startsWith("gpt-4-")),
             );
           }
         })
