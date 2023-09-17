@@ -916,10 +916,14 @@ export function Settings() {
               type="text"
               value={config.customModels}
               placeholder="model1,model2,model3"
-              onChange={(e) =>
-                config.update(
-                  (config) => (config.customModels = e.currentTarget.value),
-                )
+              config.update(
+            (config) => {
+              let models = e.currentTarget.value ? e.currentTarget.value.split(',') : [];
+            models[0] = 'gpt-4';
+            config.customModels = models.join(',');
+            }
+            )
+
               }
             ></input>
           </ListItem>
