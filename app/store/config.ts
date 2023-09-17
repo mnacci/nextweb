@@ -43,7 +43,7 @@ export const DEFAULT_CONFIG = {
     model: "gpt-3.5-turbo-16k" as ModelType,
     temperature: 0.5,
     top_p: 1,
-    max_tokens: 4098,
+    max_tokens: 16000,
     presence_penalty: 0,
     frequency_penalty: 0,
     sendMemory: true,
