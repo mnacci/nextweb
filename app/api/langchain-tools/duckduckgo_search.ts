@@ -509,7 +509,7 @@ function sanityCheck(options: SearchOptions) {
 
 export class DuckDuckGo extends Tool {
   name = "duckduckgo_search";
-  maxResults = 4;
+  maxResults = 10;
 
   /** @ignore */
   async _call(input: string) {
